@@ -1,14 +1,13 @@
 <template>
     <div>
 
-        <v-form class="chat-form">
+        <div class="chat-form">
             <v-text-field
                 label="内容"
                 v-model="body"
+                v-on:keydown.enter="post"
             />
-
-            <v-btn class="info" @click="post">post</v-btn>
-        </v-form>
+        </div>
 
         <v-card class="chat" v-for="data in data" :key="data.id">
             <v-card-title>
